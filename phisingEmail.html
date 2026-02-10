@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Portal Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4e73df, #224abe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #4e73df;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .warning {
+            margin-top: 15px;
+            color: red;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>College Portal Login</h2>
+
+    <form onsubmit="showMessage(event)">
+        <input type="text" placeholder="Username" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="warning" id="msg">
+        ⚠ This was a phishing simulation!  
+        Always check URLs before entering credentials.
+    </p>
+</div>
+
+<script>
+    function showMessage(event) {
+        event.preventDefault(); // stops form submission
+        document.getElementById("msg").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
